@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+	<title> Formulário Covid-19 </title>
+	<style>
+		body{
+		font-family: Arial, Helvetica, sans-serif;
+		background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+		}
+	
+		.box{
+		    color: white;
+			position: absolute;
+			top: 90%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: rgba(0, 0, 0, 0.8);
+			padding: 15px;
+			border-radius: 15px;
+			width: 20%;
+		}
+	
+		fieldset{
+			border: 3px solid dodgerblue;
+		}
+		
+		legend{
+			border: 1px solid dodgerblue;
+			padding: 10px;
+			text-align: center;
+			background-color: dodgerblue;
+			border-radius: 8px;
+		}
+	
+	.inputBox{
+		position: relative;
+	}
+	
+	.inputUser{
+		background: none;
+		border: none;
+		border-bottom: 1px solid white;
+		outline: none;
+		color: white;
+		font-size: 15px;
+		width: 100%;
+		letter-spacing: 2px;
+	}
+	
+	.labelInput{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		pointer-events: none;
+		transition: .5px;
+	}
+	
+	.inputUser:focus ~ .labelInput, 
+	.inputUser:valid ~ .labelInput{
+		top: -20px;
+		font-size: 10px;
+		color: dodgerblue;
+	}
+	
+	h1{
+		font-size: 20px;
+		font-family: Candara;
+		margin-top: 5px;
+		margin-left: 20px;
+		float: left;
+	
+	}
+	
+	ul{
+		left: -290%;
+		top: 50%; 
+	}
+	
+	</style>
+	
+	
+	<link href="seu-stylesheet.css" rel="stylesheet"/>
+	<script src="scripts/seu-script.js"></script>
+</head>
+<body>
+
+<ul>
+<img src="moça.png" class="foto-perfil"  width="500" height="300" align="right" /><br>
+</ul>
+<h1> O intuito dessa pesquisa é de levantar dados<br>que possam quantificar as vacinas aplicadas,<br>
+    mostrando um ranking em nossa região<br> de quais vacinas tivemos mais disponibilização<br> a população,
+	tendo também como foco, ajudar <br>as empresas e demais estabelecimentos comerciais,<br> tendo como objetivo
+	a segurança de todos.</h1>
+
+	<div class="box">
+	<form action="">
+		<fieldset>
+			<legend> <b>Pesquisa sobre a vacinação da Covid-19 </b> </legend>
+			<br>
+			
+			<div class="inputBox"> 
+			<input type="text" name="idade" id="idade" class="inputUser" required>
+			<label for="idade" class="labelInput"> Idade </label>
+			</div>
+			<br>
+					
+			<label for="place">Cidade</label>
+			<select id="place">
+			<option value="place">Cidade</option>
+			<option value="place">Sertãozinho</option>
+			<option value="place">Pontal</option>
+			<option value="place">Cruz das posses</option>
+			<option value="place">Barrinha</option>
+			<option value="place">Pitangueiras</option>
+			<option value="place">Ribeirão Preto</option>
+			</select>
+			
+			<br><br>
+
+			<p><b>Sexo:</b></p>
+			<input type="radio" id="feminino" name="genero" value="feminino" required>
+			<label for="feminino">Feminino</label>
+			<br>
+			
+			<input type="radio" id="masculino" name="masculino" value="masculino" required>
+			<label for="masculino">Masculino</label>
+			<br>
+			
+			<input type="radio" id="outro" name="outro" value="outro" required>
+			<label for="outro">Outro</label>
+			<br><br>
+			
+			<div class="inputBox">
+			<input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" required>
+			<label for="data_nascimento"><b> Data de nascimento </b> </label>
+			</div>  
+			<br>
+			
+			<p><b>Possui comorbidade?</b></p>
+			<input type="radio" id="sim" name="sim" value="sim" required>
+			<label for="sim">Sim</label>
+			<br>
+			
+			<input type="radio" id="não" name="não" value="não" required>
+			<label for="não">Não</label>
+			<br><br>
+			
+			
+			<label for="vacinas"> Qual vacina você tomou? </label>
+			<select id="vacina">
+			<option value="Corona Vac"> Vacina </option>
+			<option value="Corona Vac">Corona Vac </option>
+			<option value="Corona Vac">Oxford</option>
+			<option value="Corona Vac">Aztra Zeneca</option>
+			<option value="Corona Vac">Pfizer</option>
+			<option value="Corona Vac">Jansen</option>
+			</select>
+		
+			<br> <br> <br>
+			
+				<p><b>Você teve alguma reação após tomar a vacina?</b></p>
+			<input type="radio" id="sim" name="sim" value="sim" required>
+			<label for="sim">Sim</label>
+			<br>
+			
+			<input type="radio" id="não" name="não" value="não" required>
+			<label for="não">Não</label>
+			<br><br>
+			<br> <br>
+			
+			<div class="inputBox">
+			<input type="date" name="data_1dose" id="data_1dose" class="inputUser" required>
+			<label for="data_1dose"><b> Data 1°dose </b> </label>
+			</div> 
+			
+			<br>
+			
+			<div class="inputBox">
+			<input type="date" name="data_2dose" id="data_2dose" class="inputUser" required>
+			<label for="data_2dose"><b> Data 2°dose </b> </label>
+			</div> 
+			
+			<br>
+			
+		    <div class="inputBox">
+			<input type="date" name="data_doseunica" id="data_doseunica" class="inputUser" required>
+			<label for="data_doseunica"><b> Data dose única </b> </label>
+			</div> 
+			
+			<br>
+			<input type="submit" name="submit" id="submit">
+		</fieldset>
+	</form>
+	</div>
+</body>
+</html>
